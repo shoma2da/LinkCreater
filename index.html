@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>リンク作成ツール</title>
+    <script>
+function overrideLink() {
+    var link = document.getElementById("linkText");
+    var input = document.getElementById("input");
+
+    link.innerHTML = input.value;
+    link.setAttribute("href", input.value);
+}
+    </script>
+</head>
+<body>
+    <input id="input" type="text" onkeyup="overrideLink()">
+    <h2><a href="http://www.yahoo.co.jp" id="linkText">Link is here!</a></h2>
+</body>
+</html>
